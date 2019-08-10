@@ -11,6 +11,12 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
+                        @if(session('successMessage'))
+                            <div class="alert alert-success text-center" role="alert">
+                                Password Is Changed Successfully
+                            </div>
+                        @endif
+
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
